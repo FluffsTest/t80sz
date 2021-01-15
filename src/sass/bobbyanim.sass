@@ -1,0 +1,20 @@
+@use 'vars'
+#svgbase
+    stroke-dasharray: 1000
+    animation: dash 10s infinite linear
+    circle
+        animation: dash 5s infinite linear
+
+#svgbase, circle
+    filter: drop-shadow(vars.$ds-tierhy)
+
+circle
+    stroke-dasharray: 3000
+    stroke-linecap: round
+    animation: dash 5s infinite ease-in-out
+
+@keyframes dash
+    0%
+        stroke-dashoffset: 0
+    100%
+        stroke-dashoffset: 6000
