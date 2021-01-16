@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "description": "The 80's Zone's Website Source Code.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "npx parcel build src/html/index.html --out-dir public/ --no-minify --no-source-maps",
+    "watch": "npx parcel watch src/html/index.html --no-minify --no-source-maps",
     "start": "npx nodemon server/index.js"
   },
   "repository": {
