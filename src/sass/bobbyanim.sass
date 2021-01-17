@@ -13,7 +13,7 @@ body
     margin: auto
     justify-content: center
     align-items: center
-    width: 75%
+    width: 65%
 #sphere
     width: 50%
 
@@ -37,11 +37,30 @@ circle
     align-items: center 
     justify-content: center 
     width: 34% 
-    top: 13vw 
-    margin-right: 0.5vw 
+    top: 11.5vw 
+    margin-right: 1vw 
 
 @keyframes dash
     0%
         stroke-dashoffset: 0
     100%
         stroke-dashoffset: 6000
+
+@media screen and (orientation: portrait)
+    #bobby
+        width: 100%
+        margin-left: 10px
+    #smiley
+        width: 33%
+        top: 18vw
+    #sphere
+        width: 50%
+@media screen and (orientation: portrait) and (min-width: 100px) and (max-width: 450px)
+    #bobby
+        width: 100%
+        margin-left: 10px
+    #smiley
+        width: 50%
+        top: 25vw
+    #sphere
+        width: 75%
