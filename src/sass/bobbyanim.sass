@@ -1,11 +1,29 @@
 @use 'vars'
+body
+    background-color: #150411
+
+#rainbow-cards
+    display: flex
+    width: 100%
+    height: 100%
+
+#bobby
+    position: relative
+    display: flex
+    margin: auto
+    justify-content: center
+    align-items: center
+    width: 75%
+#sphere
+    width: 50%
+
 #svgbase
     stroke-dasharray: 1000
     animation: dash 10s infinite linear
     circle
         animation: dash 5s infinite linear
 
-#svgbase, circle
+#svgbase, circle, rect[rx='22.5']
     filter: drop-shadow(vars.$ds-tierhy)
 
 circle
@@ -13,10 +31,14 @@ circle
     stroke-linecap: round
 
 #smiley
-    position: absolute
-    top: 140px
-    left: 83px
-    z-index: -1
+    position: absolute 
+    z-index: -1 
+    display: flex 
+    align-items: center 
+    justify-content: center 
+    width: 34% 
+    top: 13vw 
+    margin-right: 0.5vw 
 
 @keyframes dash
     0%
