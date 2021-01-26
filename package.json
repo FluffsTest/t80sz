@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "description": "The 80's Zone's Website Source Code.",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "build": "npx parcel build src/html/index.html --out-dir public/ --no-minify --no-source-maps",
-    "watch": "npx parcel watch src/html/index.html --no-minify --no-source-maps",
+    "build": "npx parcel build src/html/index.html --dist-dir public/ --no-minify --no-source-maps",
+    "watch": "npx parcel serve src/html/index.html --dist-dir watch/ --no-source-maps",
     "start": "npx nodemon server/index.js"
   },
   "repository": {
@@ -20,18 +19,19 @@
   },
   "homepage": "https://the80s.zone",
   "dependencies": {
-    "autoprefixer": "^10.2.1",
+    "autoprefixer": "^10",
     "express": "^4.17.1",
     "nodemon": "^2.0.7",
-    "postcss": "^8.2.4",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
     "tailwindcss": "^2.0.2"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
-    "parcel-bundler": "^1.12.4",
-    "prettier": "^2.2.1",
-    "sass": "^1.32.4"
+    "parcel": "^2.0.0-nightly.553",
+    "postcss": "^8.2.4",
+    "postcss-import": "12.0.1",
+    "postcss-mixins": "^7.0.1",
+    "postcss-nested": "^5.0.3",
+    "posthtml-css-modules": "^0.1.3",
+    "prettier": "^2.2.1"
   }
 }

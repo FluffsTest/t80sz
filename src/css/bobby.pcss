@@ -1,0 +1,68 @@
+:root {
+    --ds-tierhy: 0px 3px 10px rgba(0,0,0,.3); /* the only time i'm using native variables lmao */
+}
+body {
+    @apply bg-purple;
+}
+
+#rainbow-cards {
+    @apply w-full h-full flex;
+}
+
+#bobby {
+    @apply w-8/12 m-auto justify-center items-center flex relative;
+    #sphere {
+        @apply w-6/12;
+    }
+    #svgbase {
+        stroke-dasharray: 1000;
+        animation: dash 10s infinite linear;
+        circle {
+            animation: dash 5s infinite linear;
+        }
+    }
+    #svgbase, circle, rect[rx='22.5'] {
+        filter: drop-shadow(var(--ds-tierhy));
+    }
+
+    circle {
+        stroke-dasharray: 3000;
+        stroke-linecap: round;
+    }
+
+    #smiley {
+        z-index: -1;
+        @apply w-4/12 items-center justify-center absolute flex;
+        top: 11.5vw; 
+        margin-right: 1vw; 
+    }
+    @keyframes dash {
+        0% {
+            stroke-dashoffset: 0;
+        }
+        100% {
+            stroke-dashoffset: 6000;
+        }
+    }
+}
+@media screen and (orientation: portrait) {
+    #bobby {
+        @apply w-full ml-2.5;
+    }
+    #smiley {
+        @apply w-4/12;
+        top: 18vw;
+    }
+    #sphere {
+        @apply w-6/12;
+    }
+}
+@media screen and (orientation: portrait) and (min-width: 100px) and (max-width: 450px) {
+    #smiley {
+        @apply w-6/12;
+        top: 25vw;
+    }
+    #sphere {
+        @apply w-9/12;
+    }
+}
