@@ -1,6 +1,6 @@
-import express from 'express';
-import https from 'https';
-import fs from 'fs';
+const express = require('express');
+const https = require('https');
+const fs = require('fs');
 const ws = express();
 const domain = {
 	ip: '127.0.0.1', 

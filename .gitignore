@@ -3,3 +3,4 @@ public
 .cache
 package-lock.json
 certs
+watch
