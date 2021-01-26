@@ -1,0 +1,11 @@
+{
+  "modules": false,
+  "plugins": {
+    "tailwindcss": {},
+    "postcss-mixins": {},
+    "postcss-nested": {},
+    "autoprefixer": {
+      "grid": true
+    }
+  }
+}
