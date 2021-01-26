@@ -4,8 +4,8 @@
   "description": "The 80's Zone's Website Source Code.",
   "main": "index.js",
   "scripts": {
-    "build": "npx parcel build src/html/index.html --dist-dir public/ --no-minify --no-source-maps",
-    "watch": "npx parcel serve src/html/index.html --dist-dir watch/ --no-source-maps",
+    "build": "npx parcel build src/html/index.html --dist-dir public/ --cache-dir .cache/ --no-minify --no-source-maps",
+    "watch": "npx parcel serve src/html/index.html --dist-dir watch/ --cache-dir .cache/ --no-source-maps",
     "start": "npx nodemon server/index.js"
   },
   "repository": {
