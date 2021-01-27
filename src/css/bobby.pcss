@@ -4,37 +4,28 @@
 body {
     @apply bg-purple;
 }
-
 #rainbow-cards {
     @apply w-full h-full flex;
 }
-
 #bobby {
     @apply w-8/12 m-auto justify-center items-center flex relative;
-    #sphere {
-        @apply w-6/12;
-    }
-    #svgbase {
+    #arc {
         stroke-dasharray: 1000;
         animation: dash 10s infinite linear;
         circle {
             animation: dash 5s infinite linear;
         }
     }
-    #svgbase, circle, rect[rx='22.5'] {
+    #arc, circle, rect[rx='22.5'] {
         filter: drop-shadow(var(--ds-tierhy));
     }
-
     circle {
         stroke-dasharray: 3000;
         stroke-linecap: round;
     }
-
-    #smiley {
+    #base {
         z-index: -1;
-        @apply w-4/12 items-center justify-center absolute flex;
-        top: 11.5vw; 
-        margin-right: 1vw; 
+        @apply w-6/12 items-center justify-center absolute flex;
     }
     @keyframes dash {
         0% {
@@ -51,18 +42,10 @@ body {
     }
     #smiley {
         @apply w-4/12;
-        top: 17vw !important;
-    }
-    #sphere {
-        @apply w-6/12;
     }
 }
 @media screen and (orientation: portrait) and (min-width: 100px) and (max-width: 450px) {
     #smiley {
         @apply w-6/12;
-        top: 17vw !important;
-    }
-    #sphere {
-        @apply w-9/12;
     }
 }
