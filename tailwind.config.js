@@ -10,8 +10,8 @@ module.exports = {
             red: "#c429a9",
             blue: "#4445ff",
             green: "#0bf131",
-	    DEFAULT: "#150441", 
-	    purple: "#150441" 
+	    DEFAULT: "#150411", 
+	    purple: "#150411" 
         },
         fontFamily: {
             sans: ['Recoleta', 'sans-serif'],
