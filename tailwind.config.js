@@ -10,12 +10,18 @@ module.exports = {
             red: "#c429a9",
             blue: "#4445ff",
             green: "#0bf131",
-	    DEFAULT: "#150411", 
-	    purple: "#150411" 
+            DEFAULT: "#150411",
+            purple: {
+                dark: "#150411",
+                light: "#281428"
+            }
         },
         fontFamily: {
             sans: ['Recoleta', 'sans-serif'],
             alt: ['Recoleta Alt', 'sans-serif']
-        }
+        },
+        fill: theme => ({
+            'purple': theme('colors.purple.light')
+        })
     }
 }

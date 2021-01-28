@@ -2,13 +2,24 @@
     --ds-tierhy: 0px 3px 10px rgba(0,0,0,.3); /* the only time i'm using native variables lmao */
 }
 body {
-    @apply bg-purple;
+    @apply bg-purple-dark;
 }
 #rainbow-cards {
-    @apply w-full h-full flex;
+    @apply w-full h-full transform scale-100 sm:scale-50 flex;
+}
+#card {
+    @apply flex justify-center items-center w-full h-full;
+    #rectcard {
+        @apply w-1/2 relative left-3;
+        #cardbase {
+            @apply fill-purple;
+            stroke-dasharray: 150;
+            animation: dash 50s infinite linear;
+        }
+    }
 }
 #bobby {
-    @apply w-full sm:w-2/3 m-auto justify-center items-center flex relative;
+    @apply w-full h-full justify-center items-center flex absolute;
     #arc {
         stroke-dasharray: 1000;
         animation: dash 10s infinite linear;
@@ -16,7 +27,7 @@ body {
             animation: dash 5s infinite linear;
         }
     }
-    #arc, circle, rect[rx='22.5'] {
+    #arc, circle, rect[rx='22.5'], #cardbase {
         filter: drop-shadow(var(--ds-tierhy));
     }
     circle {
@@ -24,7 +35,7 @@ body {
         stroke-linecap: round;
     }
     #base {
-        @apply w-2/3 sm:w-2/5 items-center justify-center absolute flex;
+        @apply w-2/5 ml-2 sm:ml-1 absolute;
     }
     @keyframes dash {
         0% {
