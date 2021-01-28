@@ -8,7 +8,7 @@ body {
     @apply w-full h-full flex;
 }
 #bobby {
-    @apply w-8/12 m-auto justify-center items-center flex relative;
+    @apply w-full sm:w-2/3 m-auto justify-center items-center flex relative;
     #arc {
         stroke-dasharray: 1000;
         animation: dash 10s infinite linear;
@@ -24,8 +24,7 @@ body {
         stroke-linecap: round;
     }
     #base {
-        z-index: -1;
-        @apply w-6/12 items-center justify-center absolute flex;
+        @apply w-2/3 sm:w-2/5 items-center justify-center absolute flex;
     }
     @keyframes dash {
         0% {
@@ -34,18 +33,5 @@ body {
         100% {
             stroke-dashoffset: 6000;
         }
-    }
-}
-@media screen and (orientation: portrait) {
-    #bobby {
-        @apply w-full ml-2.5;
-    }
-    #smiley {
-        @apply w-4/12;
-    }
-}
-@media screen and (orientation: portrait) and (min-width: 100px) and (max-width: 450px) {
-    #smiley {
-        @apply w-6/12;
     }
 }
