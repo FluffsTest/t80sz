@@ -18,7 +18,8 @@ module.exports = {
         },
         fontFamily: {
             sans: ['Recoleta', 'sans-serif'],
-            alt: ['Recoleta Alt', 'sans-serif']
+            alt: ['Recoleta Alt', 'sans-serif'],
+            icon: ['Material Design Icons']
         },
         fill: theme => ({
             'purple': theme('colors.purple.light')
