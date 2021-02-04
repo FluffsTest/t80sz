@@ -17,7 +17,7 @@
       </svg>
     </div>
     <div id="bobby">
-      <svg xmlns="http://www.w3.org/2000/svg" id="base" preserveAspectRatio="xMin meet" viewBox="-50 -20 1050 800">
+      <svg xmlns="http://www.w3.org/2000/svg" id="base" preserveAspectRatio="xMin meet" viewBox="-50 -35 975 800">
     <defs/>
         <defs>
           <linearGradient id="sa" x1="4%" x2="169.6%" y1="46.9%" y2="62.9%">
@@ -32,14 +32,14 @@
           <stop stop-color="#FFE500" offset="99.9%"/>
         </linearGradient>
         </defs>
-        <g fill="none" fill-rule="evenodd" transform="translate(160 290)">
+        <g fill="none" fill-rule="evenodd" transform="translate(120 275)">
             <circle cx="203.5" cy="32.5" r="22" fill="#FFF"/>
             <circle cx="458.5" cy="32.5" r="22" fill="#FFF"/>
             <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M294.8 120.4c5.9 18.8 17.6 28.2 35 28.2s29.8-9.4 37-28.2"/>
             <rect width="181" height="45" y="63" fill="url(#sa)" rx="22.5"/>
             <rect width="181" height="45" x="481" y="63" fill="url(#sa)" rx="22.5"/>
         </g>
-      <g transform="translate(40 20) " fill="none" fill-rule="evenodd" stroke-linejoin="round">
+      <g fill="none" fill-rule="evenodd" stroke-linejoin="round">
         <circle stroke="url(#a)" stroke-width="25" cx="446" cy="357" r="357"/>
         <g stroke-linecap="round">
           <path xmlns="http://www.w3.org/2000/svg" d="M68 233c-75 5-88 36-38 90 99 109 509 238 803 127 80-32 83-71 8-115" stroke="url(#c)" stroke-width="30" id="arc"/>
