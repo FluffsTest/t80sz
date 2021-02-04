@@ -16,10 +16,6 @@ const opts = {
 }
 ws.use(helmet());
 ws.use(compress({ level: 9 }));
-ws.get('/', function(req, res) {
-	res.redirect('/home')
-});
-ws.get('/*', express.static('public'));
-ws.use('/home', express.static('public/home/'));
+ws.get('/', express.static('public/home'));
 const hps = https.createServer(opts, ws);
 hps.listen(domain.port, domain.ip, () => {console.log(`sup, server is up at ${domain.ip}:${domain.port}`)} );
