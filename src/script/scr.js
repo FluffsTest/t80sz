@@ -1,6 +1,10 @@
 import 'svelte'
 import Bobby from '../svelte-html/bobby.svelte'
-const bby = new Bobby({
+import Debug from '../svelte-html/menu.svelte'
+let site = new Bobby({
 	target: document.body
 })
-export default bby
+site += new Debug({
+	target: document.body
+})
+export default site
