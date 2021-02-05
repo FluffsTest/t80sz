@@ -1,6 +1,6 @@
 {
   "name": "t80sz-animation",
-  "version": "0.2.0",
+  "version": "0.5.0",
   "description": "The 80's Zone's Website Source Code.",
   "main": "index.js",
   "scripts": {
