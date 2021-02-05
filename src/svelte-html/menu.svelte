@@ -2,7 +2,7 @@
     import '../css/fonts.pcss';
     import '../css/menu.pcss';
     function homepage(name) {
-        return `${document.location.origin}/home#${name}`
+        return `#${name}`
 	}
 </script>
 <div id="menu-base">
