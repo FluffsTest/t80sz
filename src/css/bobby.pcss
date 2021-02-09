@@ -2,12 +2,12 @@ body {
     @apply bg-purple-dark overflow-hidden;
 }
 #rainbow-cards {
-    @apply w-full h-full transform scale-125 sm:scale-50 flex;
+    @apply w-screen h-screen transform scale-125 sm:scale-50 flex;
 }
 #card {
     @apply flex justify-center items-center w-full h-full;
     #rectcard {
-        @apply w-1/2 relative left-1.5 sm:left-3;
+        @apply w-1/2 relative;
         #cardbase {
             @apply fill-purple;
             stroke-dasharray: 125;
@@ -32,7 +32,7 @@ body {
         stroke-linecap: round;
     }
     #base {
-        @apply w-2/5 ml-2 sm:ml-3 absolute;
+        @apply w-2/5 mr-1 sm:mr-3 absolute;
     }
     @keyframes dash {
         0% {
