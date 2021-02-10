@@ -1,13 +1,17 @@
 body {
     @apply bg-purple-dark overflow-hidden;
 }
+
 #rainbow-cards {
     @apply w-screen h-screen transform scale-125 sm:scale-50 flex;
 }
+
 #card {
     @apply flex justify-center items-center w-full h-full;
+
     #rectcard {
         @apply w-1/2 relative;
+
         #cardbase {
             @apply fill-purple;
             stroke-dasharray: 125;
@@ -15,30 +19,37 @@ body {
         }
     }
 }
+
 #bobby #arc, #bobby circle, #bobby rect[rx='22.5'], #cardbase {
     @apply filter filter-drop-shadow-lg;
 }
+
 #bobby {
     @apply w-full h-full justify-center items-center flex absolute;
+
     #arc {
         stroke-dasharray: 1000;
         animation: dash 10s infinite linear;
+
         circle {
             animation: dash 5s infinite linear;
         }
     }
+
     circle {
         stroke-dasharray: 3000;
         stroke-linecap: round;
     }
+
     #base {
         @apply w-2/5 mr-1 sm:mr-3 absolute;
     }
+
     @keyframes dash {
         0% {
             stroke-dashoffset: 0;
         }
-       100% {
+        100% {
             stroke-dashoffset: 6000;
         }
     }
