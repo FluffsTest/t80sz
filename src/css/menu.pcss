@@ -1,12 +1,16 @@
 @define-mixin icon $clr: white, $sym {
-    /* sm: link / sym: symbol */
-    @apply text-$clr;
+	& {
+    	color: $clr;
+	}
     &:before {
         content: $sym;
     }
 
     &:hover {
-        @apply text-purple-dark bg-$clr shadow;
+		background-color: $clr;
+		color: #150411;
+		--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+		box-shadow: var(--tw-shadow);
     }
 }
 #menu-base {
@@ -26,21 +30,21 @@ a {
 }
 
 .icon-info {
-    @mixin icon yellow, "info";
+    @mixin icon #ffe500, "info";
 }
 
 .icon-server {
-    @mixin icon orange, "chat";
+    @mixin icon #f28b27, "chat";
 }
 
 .icon-archive {
-    @mixin icon red, "archive";
+    @mixin icon #c429a9, "archive";
 }
 
 .icon-varchive {
-    @mixin icon blue, "videocam";
+    @mixin icon #4445ff, "videocam";
 }
 
 .icon-source {
-    @mixin icon green, "code";
+    @mixin icon #0bf131, "code";
 }

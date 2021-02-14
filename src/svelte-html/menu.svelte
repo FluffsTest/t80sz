@@ -1,27 +1,17 @@
 <script>
     import '../css/fonts.pcss';
     import '../css/menu.pcss';
-
+	const items = ["info", "server", "archive", "varchive", "source"];
     function homepage(name) {
         return `#${name}`
     }
 </script>
 <div id="menu-base">
-    <div id="options">
-        <a href={homepage("info")}>
-            <p class="icon icon-info"></p>
-        </a>
-        <a href={homepage("server")}>
-            <p class="icon icon-server"></p>
-        </a>
-        <a href={homepage("archive")}>
-            <p class="icon icon-archive"></p>
-        </a>
-        <a href={homepage("varchive")}>
-            <p class="icon icon-varchive"></p>
-        </a>
-        <a href={homepage("source")}>
-            <p class="icon icon-source"></p>
-        </a>
-    </div>
+    <nav id="options">
+		{#each items as i}
+		<a href="#{i}">
+			<p class="icon icon-{i}"></p>
+		</a>
+		{/each}
+    </nav>
 </div>

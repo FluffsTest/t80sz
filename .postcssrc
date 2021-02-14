@@ -1,8 +1,9 @@
 {
   "modules": false,
   "plugins": {
-    "postcss-mixins": {},
+    "postcss-import": {},
     "tailwindcss": {},
+    "postcss-mixins": {},
     "postcss-nested": {},
     "autoprefixer": {
       "grid": true

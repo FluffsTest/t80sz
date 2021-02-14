@@ -3,5 +3,5 @@ public
 .cache
 package-lock.json
 certs
-watch
+dev
 src/fonts/recoleta
