@@ -1,3 +1,4 @@
+const htmlWebpack = require('html-webpack-plugin');
 const path = require('path');
 const defcfg = require('./webpack.config');
 const { merge } = require('webpack-merge');
@@ -23,4 +24,4 @@ module.exports = merge(defcfg, {
 			}
 		]
 	}
-}
+})
