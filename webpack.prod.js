@@ -17,7 +17,11 @@ module.exports = merge(defcfg, {
 		new htmlWebpack({
 			title: "THE 80's ZONE",
 			filename: "home/index.html",
-			meta: {viewport: 'width=device-width, initial-scale=1'},
+			meta: {
+				'viewport': 'width=device-width, initial-scale=1',
+				'description': 'EST. 2017-10-31',
+				'theme-color': '#150411'
+			},
 			hash: true
 		}),
 		new cssExtract({
