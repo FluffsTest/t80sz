@@ -1,6 +1,7 @@
 const cssExtract = require('mini-css-extract-plugin');
 const cssMinimize = require('css-minimizer-webpack-plugin');
 const htmlWebpack = require('html-webpack-plugin');
+const compress = require('compression-webpack-plugin');
 const path = require('path');
 const defcfg = require('./webpack.config');
 const { merge } = require('webpack-merge');
@@ -10,7 +11,7 @@ module.exports = merge(defcfg, {
 	output: {
 		filename: "src/t80sz.core.js",
 		path: path.resolve(__dirname, "public"),
-		publicPath: ''
+		publicPath: './'
 	},
 	plugins: [
 		new htmlWebpack({
@@ -21,7 +22,8 @@ module.exports = merge(defcfg, {
 		}),
 		new cssExtract({
 			filename: "src/[name].css"
-		})
+		}),
+		new compress({exclude: /node_modules/, compressionOptions: {level: 7}})
 	],
 	module: {
 		rules: [
@@ -32,12 +34,16 @@ module.exports = merge(defcfg, {
       		},
 			{
         		test: /\.(woff|woff2|eot|ttf|otf)$/i,
-				type: 'asset/resource',
-				parser: {
-					dataUrlCondition: {
-						maxSize: 8 * 1024 
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'src/fonts',
+							publicPath: '../src/fonts'
+						}
 					}
-				},
+				]
       		},
 		]
 	},
