@@ -17,8 +17,7 @@ module.exports = {
             }
         },
         fontFamily: {
-            sans: ['Recoleta', 'sans-serif'],
-            alt: ['Recoleta Alt', 'sans-serif'],
+            sans: ['Recoleta Alt', 'sans-serif'],
             icon: ['Material Design Icons']
         },
         fill: theme => ({
