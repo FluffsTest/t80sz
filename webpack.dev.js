@@ -14,6 +14,10 @@ module.exports = merge(defcfg, {
 			filename: "index.html",
 			meta: {viewport: 'width=device-width, initial-scale=1'},
 			hash: true
+		}),
+		new htmlWebpack({
+			filename: "debug.html",
+			template: "src/debug/debug.html"
 		})
 	],
 	module: {

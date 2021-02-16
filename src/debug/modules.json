@@ -1,0 +1,22 @@
+{
+	"modules": [
+		{
+			"name": "Bobby",
+			"public": "Bobby Animation Sequence",
+			"path": "../svelte-html/bobby.svelte",
+			"id": "bobby-animation"
+		},
+		{
+			"name": "Menu",
+			"public": "Website Main Menu",
+			"path": "../svelte-html/menu.svelte",
+			"id": "menu"
+		},
+		{
+			"name": "BgSwap",
+			"public": "Background Color Swapping",
+			"path": "../svelte-html/debug/bgswap.svelte",
+			"id": "bg-swap"
+		}
+	]
+}
