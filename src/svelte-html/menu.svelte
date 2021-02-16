@@ -1,7 +1,28 @@
 <script>
     import '../css/fonts.pcss';
     import '../css/menu.pcss';
-	const items = ["info", "server", "archive", "varchive", "source"];
+	const items = [
+		{
+			name: "Information",
+			id: "info"
+		}, 
+		{
+			name: "Our Server",
+			id: "server"
+		}, 
+		{
+			name: "The Archive",
+			id: "archive"
+		},
+		{
+			name: "Video Archive",
+			id: "varchive"
+		},
+		{
+			name: "Source Code",
+			id: "source"
+		}	
+	];
     function homepage(name) {
         return `#${name}`
     }
@@ -9,8 +30,8 @@
 <div id="menu-base">
     <nav id="options">
 		{#each items as i}
-		<a href="#{i}">
-			<p class="icon icon-{i}"></p>
+		<a href="#{i.id}" alt="{i.name}">
+			<p class="icon icon-{i.id}"></p>
 		</a>
 		{/each}
     </nav>

@@ -1,17 +1,16 @@
 @define-mixin icon $clr: white, $sym {
 	& {
-    	color: $clr;
+    	color: $clr;	
 	}
     &:before {
         content: $sym;
     }
-
     &:hover {
 		background-color: $clr;
 		color: #150411;
-		--tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-		box-shadow: var(--tw-shadow);
-    }
+		-tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+		box-shadow: var(--tw-shadow); 
+	}
 }
 #menu-base {
     @apply flex h-8 w-auto sm:w-8 sm:h-auto absolute top-4 left-4 rounded items-center justify-center bg-purple-light shadow-md;
