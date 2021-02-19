@@ -7,7 +7,7 @@ const defcfg = require('./webpack.config');
 const { merge } = require('webpack-merge');
 module.exports = merge(defcfg, {
 	mode: "production",
-	entry: "./src/index.js",
+	entry: "./src/index.ts",
 	output: {
 		filename: "src/t80sz.core.js",
 		path: path.resolve(__dirname, "public"),
