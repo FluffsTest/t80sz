@@ -14,7 +14,9 @@ module.exports = {
                 dark: "#150411",
                 DEFAULT: "#150411",
                 light: "#281428"
-            }
+            },
+            trans: "rgba(255,255,255,0.05)",
+            white: "#ffff"
         },
         fontFamily: {
             sans: ['Recoleta Alt', 'sans-serif'],

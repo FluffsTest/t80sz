@@ -5,7 +5,7 @@ const defcfg = require('./webpack.config');
 const { merge } = require('webpack-merge');
 module.exports = merge(defcfg, {
 	mode: 'development',
-	entry: "./src/index.js",
+	entry: "./src/index.ts",
 	output: {
 		filename: "t80sz.core.js",
 		path: path.resolve(__dirname, "dev"),
@@ -41,6 +41,10 @@ module.exports = merge(defcfg, {
 						}
 					}
 				]
+			},
+			{
+				test: /\.(json)$/i,
+				type: 'asset'
 			}
 		]
 	}

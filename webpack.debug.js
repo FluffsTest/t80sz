@@ -1,6 +1,5 @@
 const cssExtract = require('mini-css-extract-plugin');
 const htmlWebpack = require('html-webpack-plugin');
-const copyFile =  require('copy-webpack-plugin');
 const path = require('path');
 const defcfg = require('./webpack.config');
 const { merge } = require('webpack-merge');
@@ -21,11 +20,6 @@ module.exports = merge(defcfg, {
 		}),
 		new cssExtract({
 			filename: "src/[name].css"
-		}),
-		new copyFile({
-			patterns: [
-				{from: 'src/debug/modules.json', to: 'modules.json'}
-			]
 		})
 	],
 	module: {
