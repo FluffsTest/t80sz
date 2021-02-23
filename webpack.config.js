@@ -18,6 +18,11 @@ module.exports = {
         		exclude: /node_modules/,
         		use: 'svelte-loader'
       		},
+			{
+        		test: /\.tsx?$/,
+        		use: 'ts-loader',
+        		exclude: /node_modules/,
+      		},
       		{
         		test: /node_modules\/svelte\/.*\.mjs$/,
         		resolve: {
