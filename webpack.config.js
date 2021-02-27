@@ -14,7 +14,7 @@ module.exports = {
   	module: {
     	rules: [
       		{
-        		test: /\.(html|svelte)$/,
+        		test: /\.(svelte)$/,
         		exclude: /node_modules/,
         		use: 'svelte-loader'
       		},
