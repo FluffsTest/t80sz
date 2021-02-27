@@ -49,6 +49,19 @@ module.exports = merge(defcfg, {
 					}
 				]
       		},
+			{
+				test: /\.(webp|png|jpg)$/i,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'src/assets',
+							publicPath: '../src/assets'
+						}
+					}
+				]
+			}
 		]
 	},
 	optimization: {
