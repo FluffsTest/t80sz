@@ -1,18 +1,21 @@
+body { opacity: 1 !important; }
 #headline {
-    @apply select-none font-sans;
+    @apply select-none flex-col rounded flex bg-purple-light h-screen pl-2 pr-1 fixed w-56 font-sans;
     #title {
         .title-para {
             @apply text-white mb-0;
         }
         .title-h1 {
             background: linear-gradient(90deg, rgb(11, 241, 49) 0%, rgb(68, 69, 255) 25%, rgb(196, 41, 169) 50%, rgb(242, 139, 39) 75%, rgb(255, 229, 0) 100%);
-            @apply m-0 mt-1 bg-clip-text text-transparent text-4xl;
+            @apply m-0 mt-1 bg-clip-text text-4xl;
+			color: transparent;
         }
     }
     #mdl {
-        @apply w-44 bg-trans text-lg text-white pl-2 leading-6 rounded shadow;
+        @apply w-44 bg-tp-heavy text-lg text-white pl-2 leading-6 rounded shadow;
     }
 }
 #playarea {
-    @apply w-4/6 h-screen flex relative left-80 rounded-lg items-center justify-center;
+	background: green;
+    @apply w-4/6 h-screen flex relative font-sans text-tp-light text-2xl left-60 rounded-lg items-center justify-center;
 }

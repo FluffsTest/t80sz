@@ -15,16 +15,25 @@ module.exports = {
                 DEFAULT: "#150411",
                 light: "#281428"
             },
-            trans: "rgba(255,255,255,0.05)",
-            white: "#ffff"
+            tp: {
+				heavy: "rgba(255,255,255,0.05)",
+				light: "rgba(255,255,255,0.5)",
+			}, 
+            white: "#fff"
         },
         fontFamily: {
             sans: ['Recoleta Alt', 'sans-serif'],
             icon: ['Material Design Icons']
         },
+		backgroundSize: {
+			screen: '250vh'
+		},
         fill: theme => ({
             'purple': theme('colors.purple.light')
-        })
+        }),
+		backgroundImage: theme => ({
+			'photocopy': 'url("../assets/photocopy.webp")'
+		})
     },
 	plugins: [
 		require('tailwindcss-css-filters')
