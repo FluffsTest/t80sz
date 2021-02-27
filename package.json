@@ -6,7 +6,6 @@
   "scripts": {
     "compile": "npx webpack --progress --color --config webpack.prod.js",
     "dev": "npx webpack serve --progress --color --config webpack.dev.js",
-    "debug": "npx webpack serve --progress --color --config webpack.debug.js",
     "start": "npx nodemon server/index.js"
   },
   "repository": {

@@ -5,9 +5,12 @@ const defcfg = require('./webpack.config');
 const { merge } = require('webpack-merge');
 module.exports = merge(defcfg, {
 	mode: 'development',
-	entry: "./src/index.ts",
+	entry: { 
+		main: "./src/index.ts",
+		debug: "./src/debug/debug.ts"
+	},
 	output: {
-		filename: "t80sz.core.js",
+		filename: "t80sz.[name].js",
 		path: path.resolve(__dirname, "dev"),
 		publicPath: '',
 	},
@@ -16,7 +19,13 @@ module.exports = merge(defcfg, {
 			title: "THE 80's ZONE",
 			filename: "index.html",
 			meta: {viewport: 'width=device-width, initial-scale=1'},
+			excludeChunks: ['debug'],
 			hash: true
+		}),
+		new htmlWebpack({
+			template: 'src/debug/debug.html',
+			filename: 'debug/index.html',
+			excludeChunks: ['main']
 		}),
 		new cssExtract({
 			filename: "src/[name].css"
@@ -43,8 +52,17 @@ module.exports = merge(defcfg, {
 				]
 			},
 			{
-				test: /\.(json)$/i,
-				type: 'asset'
+				test: /\.(webp|png|jpg)$/i,
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'src/assets',
+							publicPath: '../src/assets'
+						}
+					}
+				]
 			}
 		]
 	}
