@@ -1,4 +1,5 @@
 const path = require('path');
+const { mdsvex } = require('mdsvex');
 module.exports = {
 	output: {
 		filename: "src/t80sz.core.js",
@@ -8,16 +9,21 @@ module.exports = {
     	alias: {
       		svelte: path.resolve('node_modules', 'svelte')
     	},
-    	extensions: ['.mjs', '.js', '.svelte'],
+    	extensions: ['.mjs', '.js', '.svelte', '.svx'],
     	mainFields: ['svelte', 'browser', 'module', 'main']
   	},
   	module: {
     	rules: [
-      		{
-        		test: /\.(svelte)$/,
-        		exclude: /node_modules/,
-        		use: 'svelte-loader'
-      		},
+			{
+				test: /\.(svelte|svx)$/,
+				exclude: /node_modules/,
+				use: {
+					loader: 'svelte-loader',
+					options: {
+						preprocess: mdsvex()
+					}
+				}
+			},
 			{
         		test: /\.tsx?$/,
         		use: 'ts-loader',
