@@ -1,0 +1,27 @@
+<script>
+	import Header from '../debug/docs-header.svelte';
+</script>
+
+<style>
+</style>
+
+<Header text="hi" gradient="yellow"/> <!-- gradient options: yellow, orange, purple, blue, green -->
+
+### this is a test of the markdown syntax!
+
+to edit me, go into `"src/svelte-html/docs/XX-loremipsum.svx"`.
+
+to add more doc files, go to `"src/svelte-html/docs/docs.svelte"`, <br> import a new file, and add that entry at the modules array!
+
+example of adding a new entry:
+```js
+import BigDocFile from './01-big-doc-file.svx' //Make sure the file is in SVX format!
+const modules = [
+	//...,
+	{
+		name: BigDocFile, //it must be the same name you gave to the import
+		public: 'Big Documentation File', // the name that you will see at the selector
+		id: 'big-doc' // Make sure this one is short and does not contains any spaces.
+	}
+];
+```
