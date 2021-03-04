@@ -17,5 +17,47 @@ body { opacity: 1 !important; }
 }
 #playarea {
 	background: green;
-    @apply w-4/6 h-screen flex relative font-sans text-tp-light text-2xl left-60 rounded-lg items-center justify-center;
+	overflow: hidden;
+    @apply w-4/6 h-screen flex flex-col relative font-sans pl-4 pr-4 text-tp-light text-2xl left-60 rounded-lg items-center justify-center;
+}
+#docs-headline {
+	@apply bg-purple-light flex flex-row leading-none mb-3 items-center rounded shadow;
+    overflow-x: auto;
+    height: 2.5em;
+    line-height: 0;
+    align-items: center;
+    overflow-y: hidden;
+	#docs-list {
+		#mdl {
+			p {
+				@apply inline text-purple-light bg-yellow pl-1 pr-2 rounded ml-4;
+    			font-size: 0.75em;
+			}
+			p:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}
+#docs {
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 21em;
+	padding-top: 0.75em;
+	padding-right: 1em;
+	h1, h2, h3, p, blockquote {
+		color: white;
+		margin-top: 0.5em;
+		margin-bottom: 0.5em;
+		text-align: left;
+	}
+	p {
+		font-size: 0.75em;
+	}
+	.language-js {
+		@apply block bg-purple-dark leading-5;
+    	font-size: 0.65em;
+    	color: white;
+    	padding: 5px;
+	}
 }
