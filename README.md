@@ -1,4 +1,4 @@
-<img "src/assets/readme/modernbobby.png" alt="modern-bobby" width="100"/>
+<a href="url"><img src="https://github.com/ryeenii/t80sz/raw/main/src/assets/readme/modernbobby.png" align="center" width="250" ></a>
 # Installation
 Clone the repo, as usual, and then install the dependencies:
 ```
