@@ -20,7 +20,7 @@
   "homepage": "https://the80s.zone",
   "dependencies": {
     "autoprefixer": "latest",
-    "compression-with-brotli": "^1.7.5",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "helmet": "^4.4.1",
     "nodemon": "^2.0.7",
