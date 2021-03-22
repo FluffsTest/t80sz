@@ -1,16 +1,19 @@
 import 'svelte'
 import Bobby from './svelte-html/bobby.svelte'
 import Menu from './svelte-html/menu.svelte'
-document.body.style.cssText = 'opacity: 0; transition: ease-in-out 200ms;'
+const mainMenu = document.createElement('div');
+mainMenu.id = 'main-menu';
+document.body.appendChild(mainMenu);
+mainMenu.style.cssText = 'opacity: 0; transition: ease-in-out 200ms;'
 async function loadElements() {
 	new Bobby({
-    	target: document.body
+    	target: mainMenu
 	})
 	new Menu({
-    	target: document.body
+    	target: mainMenu
 	})
 }
 loadElements()
 .then(() => { 
-	setTimeout(() => { document.body.style.cssText = 'opacity: 1; transition: ease-in-out 200ms;' }, 1000);
+	setTimeout(() => { mainMenu.style.cssText = 'opacity: 1; transition: ease-in-out 200ms;' }, 1000);
 });
