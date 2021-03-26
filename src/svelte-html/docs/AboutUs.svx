@@ -1,0 +1,12 @@
+<script>
+	import Header from '../debug/docs-header.svelte';
+</script>
+
+<style>
+</style>
+
+<Header text="about us." gradient="yellow"/> <!-- gradient options: yellow, orange, purple, blue, green -->
+
+### Welcome to The 80s Zone!
+
+Born from the ashes of the official <span style="color:#FFE500">***I am Jemboy***</span> Discord server, The 80's Zone has been a social hangout for hundreds of people since its public launch on <span style="color:#FFE500">***July 4th, 2018.***</span>

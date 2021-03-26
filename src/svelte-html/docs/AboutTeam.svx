@@ -1,0 +1,10 @@
+<script>
+	import Header from '../debug/docs-header.svelte';
+</script>
+
+<style>
+</style>
+
+<Header text="hi" gradient="purple"/> <!-- gradient options: yellow, orange, purple, blue, green -->
+
+### this is a test of the markdown syntax!

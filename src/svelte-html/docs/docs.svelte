@@ -2,13 +2,19 @@
 	import '../../debug/debug.pcss';
 	import Base from '../debug/base.svelte';
 	// add your doc imports here V
-	import DocsTest from './XX-loremipsum.svx';
+	import AboutUs from './AboutUs.svx';
 	// add your file doc info here V
+	import AboutTeam from './AboutTeam.svx'
 	let modules = [
 		{
-			name: DocsTest,
-			public: 'Documentation Sample',
-			id: 'docs-base'
+			name: AboutUs,
+			public: 'about us',
+			id: 'docs-about'
+		},
+		{
+			name: AboutTeam,
+			public: 'about team',
+			id: 'docs-team'
 		},
 	];
 </script>
